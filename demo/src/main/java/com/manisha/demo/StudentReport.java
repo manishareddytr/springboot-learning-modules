@@ -1,10 +1,26 @@
 package com.manisha.demo;
 
 class StudentReport{
+	
+	private int id;
+	private String name;
 	private double maths;
 	private double physics;
 	private double chemistry;
 	private double average;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public double getMaths() {
 		return maths;
 	}
@@ -32,11 +48,14 @@ class StudentReport{
 	public StudentReport() {
 		
 	}
-	public StudentReport(double maths, double physics, double chemistry, double average) {
+	public StudentReport(int id, String name, double maths, double physics, double chemistry, double average) {
 		super();
+		this.id = id;
+		this.name = name;
 		this.maths = maths;
 		this.physics = physics;
 		this.chemistry = chemistry;
 		this.average = average;
 	}
+	
 }
