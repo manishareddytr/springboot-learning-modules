@@ -16,6 +16,10 @@ public class StudentController {
 	
 	private StudentService studService;
 	
+	public StudentController(StudentService studService) {
+		this.studService= studService;
+	}
+	
 	@PostMapping("/")
 	public String updateMarks(@RequestBody StudentReport sr) {
 		return studService.updateStudentMarks(sr);

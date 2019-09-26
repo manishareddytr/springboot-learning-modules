@@ -3,6 +3,9 @@ package com.manisha.demo;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class StudentService {
 	private StudentReport std;
 	private List<StudentReport> srl;
@@ -25,7 +28,7 @@ public class StudentService {
 		std.setChemistry(sr.getChemistry());
 		std.setMaths(sr.getMaths());
 		std.setPhysics(sr.getPhysics());
-		std.setAverage((std.getChemistry()+std.getMaths()+std.getPhysics())/3);
+		std.setAverage(Math.round((std.getChemistry()+std.getMaths()+std.getPhysics())/3));
 		srl.add(std);
 		if(rst.equals("")) rst = "Successfully added the student with id:  "+sr.getId();
 		return rst;
