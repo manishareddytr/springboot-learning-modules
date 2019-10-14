@@ -45,4 +45,8 @@ public class StudentService {
 		System.out.println(studrec.getDeptId());
 		return deptrepo.findByDeptId(studrec.getDeptId());
 	}
+	public String deleteStudent(Long id) {
+		studrepo.deleteById(id); 
+		return "Deleted the student Succesfully whose id is:" + id;
+	}
 }
